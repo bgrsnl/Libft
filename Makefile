@@ -47,8 +47,7 @@ all: $(NAME)
 
 $(NAME): $(SRCS) $(HEADER)
 	@$(CC) $(CFLAGS) -c $(SRCS)
-	@ar rc $(NAME) $(OBJECTS)
-	@ranlib $(NAME)
+	@ar rcs $(NAME) $(OBJECTS)
 
 clean: 
 	@rm -f $(OBJECTS)
@@ -57,3 +56,5 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: clean re fclean all
