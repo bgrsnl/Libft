@@ -6,7 +6,7 @@
 /*   By: bsenol <bsenol@student.42kocaeli.com.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 01:42:39 by bsenol            #+#    #+#             */
-/*   Updated: 2022/02/06 01:42:41 by bsenol           ###   ########.tr       */
+/*   Updated: 2022/02/18 13:27:55 by bsenol           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 char	*ft_strchr(const char *s, int x)
 {
+	x %= 256;
 	while (*s)
 	{
 		if (*s == x)
